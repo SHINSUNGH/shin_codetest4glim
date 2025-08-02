@@ -1,0 +1,25 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(vector<vector<int>> dots) {
+    int answer = 0;
+    int base_x = dots[0][0];
+    int base_y = dots[0][1];
+    int len_x;
+    int len_y;
+    
+    for(int i = 1; i < 4; ++i){
+        int x = dots[i][0];
+        int y = dots[i][1];
+        
+        if(base_x == x){
+            len_y = abs(base_y - y);
+        } else if (base_y == y) {
+            len_x = abs(base_x - x);
+            }
+        }
+    answer = len_x * len_y;
+    return answer;
+}
